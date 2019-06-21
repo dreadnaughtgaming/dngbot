@@ -65,7 +65,7 @@ def setup_variables():
     activity_cds = {}
     activity_triggers = {}
 
-    dng_code_link = "https://pastebin.com/TsrMWLe0"
+    dng_code_link = "http://pastebin.com/2PZARLXu"
 
     command_binds = {}
     custom_commands = {}

@@ -1,3 +1,7 @@
+v0.3
+-----
+-added files to integrate bot to heroku for online deployment
+
 v0.2 (first "working" model)
 -----
 -edited main.py to correctly call up setup.py
