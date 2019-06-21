@@ -71,14 +71,14 @@ tag_help = [
 ]
 
 help_help = [
-    "List of commands yoyo knows",
+    "List of commands dngbot knows",
     "   %c%help [page] - you already know this on",
     "   %c%rng - random number generator, do%c%rng help for usage",
-    "   %c%yoyo <message> - makes yoyo say the message",
-    "   %c%yoyosay <message> - makes yoyo tts the message",
-    "   %c%history - shows who's been making yoyo say what (newest to oldest",
-    "   %c%poke <user> - makes yoyo poke the use",
-    "   %c%uptime - tells you how long yoyo's been alive for",
+    "   %c%dngbot <message> - makes dngbot say the message",
+    "   %c%dngbotsay <message> - makes dngbot tts the message",
+    "   %c%history - shows who's been making dngbot say what (newest to oldest",
+    "   %c%poke <user> - makes dngbot poke the use",
+    "   %c%uptime - tells you how long dngbot's been alive for",
     "   %c%song - song suggestions, do%c%song help for usage",
     "   %c%flip - flips a coin",
     "   %c%8ball [message] - magic 8 ball",
@@ -87,7 +87,7 @@ help_help = [
     "   %c%nickname [user] - tells you that user's nickname, if no user given it tells you your nickname",
     "   %c%tagged - functions for information about the tag-game (see%c%tag help)",
     "   %c%msg - lightweight email-type system, see%c%msg help for help",
-    "   %c%invite - creates an invite to the channel (if yoyobot is allowed to)",
+    "   %c%invite - creates an invite to the channel (if dngbot is allowed to)",
     "   %c%hman -%c%hangman to check progress,%c%hangman new [word] create new game, random word if none given,%c%hangman [letter|word] guess a word or a letter,%c%hangman end to give up",
     "   %c%activity - see%c%activity help for commands",
     "   %c%xkcd [number] - gives the xkcd comic corresponding to that number, chooses a random number if none given",
@@ -129,9 +129,9 @@ song_help = [
     "   %c%song del|delete <playlist> <songlink> - deletes a song from that playlist",
     "   %c%song [playlists] - gives a random song from the given playlists, default if none given, if 'all' given, all playlists selected",
     "   %c%song playlists - gives a list of playlists",
-    "   %c%song connect <channel> - makes yoyo join a channel",
+    "   %c%song connect <channel> - makes dngbot join a channel",
     "   %c%song radio <playlists> - starts a radio which randomly plays songs from those playlists, all for all playlists",
-    "   %c%song stop - disconnects yoyo from channel and stops the radio",
+    "   %c%song stop - disconnects dngbot from channel and stops the radio",
     "   %c%song link - links to the current song playing",
     "   %c%song skip - votes to skip the current song",
     "   %c%song q|queue <songlink> - queue a song",
@@ -201,7 +201,7 @@ settings = [
     "radio_update_rate=3",
     "command_prefix=!",
     "radio_channel=radio_channel",
-    "bot_name=yoyobot",
+    "bot_name=dngbot",
     "max_help_lines=5"
 ]
 

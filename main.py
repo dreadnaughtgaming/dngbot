@@ -35,14 +35,14 @@ client = discord.Client()
 client.voice = None
 
 global poke_cooldowns, uptime_cooldown, uptime_start, left_messages, hangman_word, hangman_found, hangman_words, hangman_guessed_letters, hangman_tries
-global activity, activity_events, activity_cds, activity_triggers, yoyo_code_link, command_binds, custom_commands, settings, plugin_disables
+global activity, activity_events, activity_cds, activity_triggers, dng_code_link, command_binds, custom_commands, settings, plugin_disables
 global permissions, command_swaps, user_roles, money_shop, user_money, ball_8, rewards
 global msg_history, tag_stats, nickname, nick_players, songs, collections, tagged, old_tagged, radio_channel, current_music_player
 global voice_chn, song_list, song_collection, song_finished, recent_songs, skip_votes, song_queue, song_paused, nicknames, hangman_guess, song_volume
 
 def setup_variables():
     global poke_cooldowns, uptime_cooldown, uptime_start, left_messages, hangman_word, hangman_found, hangman_words, hangman_guessed_letters, hangman_tries
-    global activity, activity_events, activity_cds, activity_triggers, yoyo_code_link, command_binds, custom_commands, settings, plugin_disables
+    global activity, activity_events, activity_cds, activity_triggers, dng_code_link, command_binds, custom_commands, settings, plugin_disables
     global permissions, command_swaps, user_roles, money_shop, user_money, ball_8, rewards
     global msg_history, tag_stats, nickname, nick_players, songs, collections, tagged, old_tagged, radio_channel, current_music_player
     global voice_chn, song_list, song_collection, song_finished, recent_songs, skip_votes, song_queue, song_paused, nicknames, hangman_guess, song_volume
@@ -65,7 +65,7 @@ def setup_variables():
     activity_cds = {}
     activity_triggers = {}
 
-    yoyo_code_link = "http://pastebin.com/2PZARLXu"
+    dng_code_link = "http://pastebin.com/2PZARLXu"
 
     command_binds = {}
     custom_commands = {}
@@ -184,7 +184,7 @@ def mxlns():
 def botname():
     if "bot_name" in settings:
         return settings["bot_name"]
-    return "yoyobot"
+    return "dngbot"
 
 #command prefix - what signifies a message is a command
 def cfix():
@@ -890,7 +890,7 @@ def use_reward(member, origin_channel, reward_arr):
     if reward_arr is not None:
         for reward in reward_arr:
             data = reward.split("::")
-            if data[0] == "yoyo":
+            if data[0] == "dng":
                 if data[1] == "role":
                     role = data[2]
                     set_role(member.author.name, role)
@@ -1691,16 +1691,16 @@ def on_message(message):
                                 break
         welcome(message.author)
         global radio_channel
-        if is_command(message.content, "yoyo"):
-            if not check_command(message.author.name, "yoyo"):
+        if is_command(message.content, "dng"):
+            if not check_command(message.author.name, "dng"):
                 yield from client.send_message(message.channel, "<ROLE> You don't have permission to use that command!")
             else:
                 msg = message.content[message.content.find(" ")+1:]
                 yield from client.send_message(message.channel, msg)
                 add_history(message.author.name)
                 sucess = True
-        elif is_command(message.content, "yoyosay"):
-            if not check_command(message.author.name, "yoyosay"):
+        elif is_command(message.content, "dngsay"):
+            if not check_command(message.author.name, "dngsay"):
                 yield from client.send_message(message.channel, "<ROLE> You don't have permission to use that command!")
             else:
                 msg = message.content[message.content.find(" ")+1:]
@@ -1930,7 +1930,7 @@ def on_message(message):
             if not check_command(message.author.name, "history"):
                 yield from client.send_message(message.channel, "<ROLE> You don't have permission to use that command!")
             else:
-                msg = "<YOYO> History: " + msg_history[0]
+                msg = "<dng> History: " + msg_history[0]
                 for i in range(1, len(msg_history)):
                     if msg_history[i] != "":
                         msg = msg + ", " + msg_history[i]
@@ -2532,7 +2532,7 @@ def on_message(message):
             if not check_command(message.author.name, "code"):
                 yield from client.send_message(message.channel, "<ROLE> You don't have permission to use that command!")
             else:
-                yield from client.send_message(message.channel, "<CODE> " + yoyo_code_link)
+                yield from client.send_message(message.channel, "<CODE> " + dng_code_link)
         elif is_command(message.content, "nick"):
             try:
                 params = [""]
@@ -2701,7 +2701,7 @@ def on_message(message):
 
                         if member is not None:
                             name = member.name
-                            if (name != "yoyobot"):
+                            if (name != "dngbot"):
                                 if (name in poke_cooldowns):
                                     if poke_cooldowns[name] < time.clock():
                                         del poke_cooldowns[name]
@@ -3754,14 +3754,14 @@ client = discord.Client()
 client.voice = None
 
 global poke_cooldowns, uptime_cooldown, uptime_start, left_messages, hangman_word, hangman_found, hangman_words, hangman_guessed_letters, hangman_tries
-global activity, activity_events, activity_cds, activity_triggers, yoyo_code_link, command_binds, custom_commands, settings, plugin_disables
+global activity, activity_events, activity_cds, activity_triggers, dng_code_link, command_binds, custom_commands, settings, plugin_disables
 global permissions, command_swaps, user_roles, money_shop, user_money, ball_8, rewards
 global msg_history, tag_stats, nickname, nick_players, songs, collections, tagged, old_tagged, radio_channel, current_music_player
 global voice_chn, song_list, song_collection, song_finished, recent_songs, skip_votes, song_queue, song_paused, nicknames, hangman_guess, song_volume
 
 def setup_variables():
     global poke_cooldowns, uptime_cooldown, uptime_start, left_messages, hangman_word, hangman_found, hangman_words, hangman_guessed_letters, hangman_tries
-    global activity, activity_events, activity_cds, activity_triggers, yoyo_code_link, command_binds, custom_commands, settings, plugin_disables
+    global activity, activity_events, activity_cds, activity_triggers, dng_code_link, command_binds, custom_commands, settings, plugin_disables
     global permissions, command_swaps, user_roles, money_shop, user_money, ball_8, rewards
     global msg_history, tag_stats, nickname, nick_players, songs, collections, tagged, old_tagged, radio_channel, current_music_player
     global voice_chn, song_list, song_collection, song_finished, recent_songs, skip_votes, song_queue, song_paused, nicknames, hangman_guess, song_volume
@@ -3784,7 +3784,7 @@ def setup_variables():
     activity_cds = {}
     activity_triggers = {}
 
-    yoyo_code_link = "http://pastebin.com/2PZARLXu"
+    dng_code_link = "http://pastebin.com/2PZARLXu"
 
     command_binds = {}
     custom_commands = {}
@@ -3903,7 +3903,7 @@ def mxlns():
 def botname():
     if "bot_name" in settings:
         return settings["bot_name"]
-    return "yoyobot"
+    return "dngbot"
 
 #command prefix - what signifies a message is a command
 def cfix():
@@ -4609,7 +4609,7 @@ def use_reward(member, origin_channel, reward_arr):
     if reward_arr is not None:
         for reward in reward_arr:
             data = reward.split("::")
-            if data[0] == "yoyo":
+            if data[0] == "dng":
                 if data[1] == "role":
                     role = data[2]
                     set_role(member.author.name, role)
@@ -5410,16 +5410,16 @@ def on_message(message):
                                 break
         welcome(message.author)
         global radio_channel
-        if is_command(message.content, "yoyo"):
-            if not check_command(message.author.name, "yoyo"):
+        if is_command(message.content, "dng"):
+            if not check_command(message.author.name, "dng"):
                 yield from client.send_message(message.channel, "<ROLE> You don't have permission to use that command!")
             else:
                 msg = message.content[message.content.find(" ")+1:]
                 yield from client.send_message(message.channel, msg)
                 add_history(message.author.name)
                 sucess = True
-        elif is_command(message.content, "yoyosay"):
-            if not check_command(message.author.name, "yoyosay"):
+        elif is_command(message.content, "dngsay"):
+            if not check_command(message.author.name, "dngsay"):
                 yield from client.send_message(message.channel, "<ROLE> You don't have permission to use that command!")
             else:
                 msg = message.content[message.content.find(" ")+1:]
@@ -5649,7 +5649,7 @@ def on_message(message):
             if not check_command(message.author.name, "history"):
                 yield from client.send_message(message.channel, "<ROLE> You don't have permission to use that command!")
             else:
-                msg = "<YOYO> History: " + msg_history[0]
+                msg = "<dng> History: " + msg_history[0]
                 for i in range(1, len(msg_history)):
                     if msg_history[i] != "":
                         msg = msg + ", " + msg_history[i]
@@ -6251,7 +6251,7 @@ def on_message(message):
             if not check_command(message.author.name, "code"):
                 yield from client.send_message(message.channel, "<ROLE> You don't have permission to use that command!")
             else:
-                yield from client.send_message(message.channel, "<CODE> " + yoyo_code_link)
+                yield from client.send_message(message.channel, "<CODE> " + dng_code_link)
         elif is_command(message.content, "nick"):
             try:
                 params = [""]
@@ -6420,7 +6420,7 @@ def on_message(message):
 
                         if member is not None:
                             name = member.name
-                            if (name != "yoyobot"):
+                            if (name != "dngbot"):
                                 if (name in poke_cooldowns):
                                     if poke_cooldowns[name] < time.clock():
                                         del poke_cooldowns[name]
