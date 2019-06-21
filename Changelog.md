@@ -1,4 +1,4 @@
-v0.3
+v0.31
 -----
 -added files to integrate bot to heroku for online deployment
 
