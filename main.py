@@ -13,5 +13,5 @@ async def on_message(message):
     if message.author != client.user:
         await client.send_message(message.channel, message.content[::-1])
 
-token = os.environ.get("DISCORD_BOT_SECRET")
+token = os.environ.get("Y8RKSjqFDS2hQ4sccnY1_vmQP8mGwSm2")
 client.run(token)
