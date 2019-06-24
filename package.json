@@ -6,11 +6,11 @@
 
   "version": "0.1.0",
 
-  "main": "main.js",
+  "main": "main.py",
 
   "scripts": {
 
-    "start": "node main.js"
+    "start": "node main.py"
 
   },
 
